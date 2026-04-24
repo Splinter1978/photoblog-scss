@@ -1,0 +1,23 @@
+ 
+ 
+//   $nav-text: #7d7d7d;
+//   $nav-text-hover: #03a9f4;
+//   $galery-name-text: #b4ad9e;
+//   $text-color: #626262;
+
+//   .header {
+//      $text-color: green;
+//   }
+
+
+$colors: (
+"nav-text": #7d7d7d,
+"nav-text-hover": #03a9f4,
+"galery-name-text": #b4ad9e,
+'text-color': #626262,);
+
+@function colorize ($key) {
+@return map-get($colors, $key)
+}
+$border_reg: 2px solid blue;
+$border_nav: 3px dashed red;

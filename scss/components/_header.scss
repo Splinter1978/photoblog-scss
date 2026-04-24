@@ -1,0 +1,28 @@
+.header {
+  margin: 0 auto;
+  padding: 50px 0 65px 0;
+}
+.nav {
+  @include flexbox(center, center);
+  max-width: 555px;
+  margin: 0 auto;
+  @include bordered ($border: $border_nav);
+ 
+
+  &__item {
+  margin: 0px auto;
+  list-style: none;
+    &:hover {
+    background: linear-gradient(90deg, green, blue);
+    background-position:left;
+    animation: navhover 2s linear infinite alternate;
+    }
+    a {
+      &:link, &:visited {
+  color: colorize ("nav-text-hover");
+  text-decoration: none;
+  text-transform: uppercase;
+}
+    }
+}
+}

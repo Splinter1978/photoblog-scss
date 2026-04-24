@@ -1,0 +1,14 @@
+@mixin box_size ($height, $width) {
+  max-height: $height;
+  max-width: $width;
+}
+@mixin flexbox ($justify, $align) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $justify;
+    align-items: $align;
+    align-content: $align;
+}
+@mixin bordered ($border: $border_reg) {
+  border: $border;
+}

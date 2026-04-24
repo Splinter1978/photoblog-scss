@@ -1,0 +1,56 @@
+.galery__list {
+ @extend %flexbox ;
+  column-gap: 20px;
+  row-gap: 65px;
+}
+.galery__card {
+  list-style: none;
+  max-width: 420px;
+  max-height: 546px;
+  p {
+    color: colorize('text-color');
+  }
+}
+
+figure {
+  display: block;
+  @include box_size(280px, 420px);
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 280px;
+  width: 420px;
+  outline: auto;
+  
+}
+
+figure::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(238, 238, 5, 0.7), rgba(238, 238, 5, 0.5));
+  transform: scale(0);
+
+}
+figure:hover::after {
+  animation: filter 1s infinite;
+}
+
+@each $number in 1, 2, 3, 4, 5, 6 {
+  .fig_#{$number} {
+    background-image: url(../imgs/blog#{$number}.jpg);
+  }
+}
+
+.load-btn {
+  margin: 50px auto;
+  display: block;
+  @include bordered ();
+  padding: 20px 40px;
+  border-radius: 40px 0;
+  animation: shadow 6s linear infinite, rotateY 3s linear infinite;
+
+}
