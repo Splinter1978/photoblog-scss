@@ -1,0 +1,18 @@
+
+
+@media creen and (max-width: 950px) { 
+.nav-item>a {
+   font-size: 18px;
+}
+   .galery-list {
+      justify-content: center;
+   }
+}
+@media screen and (max-width: 480px) {
+.galery-item {
+   width: 380px;
+}
+.galery-item img {
+   width: 100%;
+}
+}
